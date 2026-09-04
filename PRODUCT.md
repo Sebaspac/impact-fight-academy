@@ -42,5 +42,6 @@ Originaltexte inkl. Eigenheiten („bedeuet", „Ergeiz", „Zirkelraining") wor
 - Bilder liegen als austauschbare Dateien unter assets/img/ (FORM-System, BILDER.md).
   `?form` an einer URL blendet die Kennzeichnung ein — muss erhalten bleiben.
 - Kontaktformular: statisch; Absenden erzeugt eine vorbefüllte E-Mail (mailto).
-- Seiten: index, training, personaltraining, kids_teens, preise, kontakt, news,
-  galerie, probetraining, impressum, datenschutz.
+- Seiten: index, training, personaltraining, kids_teens, preise, kontakt,
+  news (enthält auch die Galerie, Anker #news / #galerie), probetraining,
+  impressum, datenschutz.
