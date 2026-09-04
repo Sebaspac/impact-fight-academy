@@ -1,0 +1,31 @@
+# macOS
+.DS_Store
+
+# Internes Build-Material (Recherche, Backups, Build-Skripte) —
+# nicht Teil der ausgelieferten Website
+.agents/
+.claude/
+.codex/
+.impeccable/
+Archiv/
+FRONTEND/
+Impact Bilder/
+Logos/
+impact_fightacademy.de/
+.bak_*.html
+.alt_betheme_*.html
+all_in_one.html
+build_*.py
+fix_*.py
+pruefe_*.py
+pruefe_*.js
+double_check.py
+bilder_register.py
+bilder_register.json
+DESIGN.md
+INHALT_*.md
+INHALTS_PRUEFBERICHT.md
+
+# Unbenutzte Bild-Assets aus einer verworfenen frueheren Design-Iteration
+assets/img/forms/
+assets/img/logo.svg
