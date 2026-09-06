@@ -54,7 +54,7 @@
       <h1>Probetraining vereinbaren</h1>
       <p class="lead">Die erste Probestunde ist kostenlos – lern uns einfach kennen.</p>
       <div class="actions">
-        <a class="btn btn-red" href="kontakt.html">Zum Kontaktformular</a>
+        <a class="btn btn-red" href="#kontaktformular">Zum Kontaktformular</a>
         <a class="btn btn-line" href="tel:+498960062138">+49 89 600 621 38</a>
       </div>
     </div>
@@ -86,24 +86,34 @@
       </ol>
       <div class="hint">
         <p>Solltet ihr noch Fragen haben könnt ihr uns gerne
-          <a href="kontakt.html">kontaktieren</a>. Wir freuen uns auf euch!</p>
+          <a href="#kontaktformular">kontaktieren</a>. Wir freuen uns auf euch!</p>
       </div>
     </div>
   </section>
 
-  <section class="section section-raise reveal">
+  <section class="section section-raise reveal" id="kontaktformular">
     <div class="wrap">
       <div class="section-head">
         <h2>So erreichst du uns</h2>
       </div>
       <div class="grid grid-2">
+
         <div class="stack contact-list">
+          <div class="text-block">
+            <h4>Adresse</h4>
+            <address>
+              IMPACT Sport &amp; Fight Academy<br>
+              Slave &amp; Carina Savic<br>
+              Pfälzer-Wald-Str. 65 / Rückgebäude<br>
+              81539 München
+            </address>
+          </div>
           <div class="text-block">
             <h4>Telefon</h4>
             <p><a href="tel:+498960062138">+49 89 600 621 38</a></p>
           </div>
           <div class="text-block">
-            <h4>Mobil</h4>
+            <h4>Mobiltelefon</h4>
             <p><a href="tel:+491788513156">+49 178 851 315 6</a></p>
           </div>
           <div class="text-block">
@@ -112,15 +122,6 @@
                     data-email-user="info" data-email-domain="impact-fightacademy.de">
               E-Mail-Adresse anzeigen
             </button>
-          </div>
-        </div>
-        <div class="stack contact-list">
-          <div class="text-block">
-            <h4>Adresse</h4>
-            <address>
-              Pfälzer-Wald-Str. 65 / Rückgebäude<br>
-              81539 München
-            </address>
           </div>
           <div class="map-cta">
             <div class="map-cta-map">
@@ -133,16 +134,52 @@
             </div>
           </div>
         </div>
+
+        <form class="form-grid" data-mailform="info@impact-fightacademy.de" data-subject="Anfrage: Probetraining">
+          <div class="field">
+            <label for="pt-vorname">Vorname *</label>
+            <input type="text" id="pt-vorname" name="vorname" autocomplete="given-name" required>
+          </div>
+          <div class="field">
+            <label for="pt-nachname">Nachname *</label>
+            <input type="text" id="pt-nachname" name="nachname" autocomplete="family-name" required>
+          </div>
+          <div class="field">
+            <label for="pt-email">E-Mail-Adresse *</label>
+            <input type="email" id="pt-email" name="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="pt-telefon">Telefonnummer</label>
+            <input type="tel" id="pt-telefon" name="telefon" autocomplete="tel">
+          </div>
+          <div class="field field-full">
+            <label for="pt-nachricht">Nachricht *</label>
+            <textarea id="pt-nachricht" name="nachricht" required></textarea>
+          </div>
+          <label class="check field-full">
+            <input type="checkbox" required>
+            <span>Ich bin damit einverstanden, dass meine eingebenen Daten zum Zweck
+              der Bearbeitung meines Anliegens und zur Kontaktaufnahme verarbeitet
+              und verwendet werden. Weitere Informationen können in unserer
+              <a href="datenschutz.html">Datenschutzerklärung</a> gefunden werden. *</span>
+          </label>
+          <p class="form-note field-full">Mit * markierte Felder sind Plfichtfelder.</p>
+          <div class="field-full">
+            <button class="btn btn-red" type="submit">Nachricht senden</button>
+          </div>
+          <p class="form-note field-full">Das Absenden öffnet dein E-Mail-Programm mit der fertigen Nachricht.</p>
+        </form>
+
       </div>
     </div>
   </section>
 
   <section class="section cta-band reveal">
     <div class="wrap">
-      <h2>Bereit loszulegen?</h2>
-      <p>Schreib uns kurz, welche Einheit du ausprobieren möchtest — wir melden uns.</p>
+      <h2>Lieber gleich telefonisch?</h2>
+      <p>Ruf uns direkt an — wir vereinbaren dein kostenloses Probetraining am Telefon.</p>
       <div class="actions">
-        <a class="btn btn-red" href="kontakt.html">Zum Kontaktformular</a>
+        <a class="btn btn-red" href="tel:+498960062138">+49 89 600 621 38</a>
         <a class="btn btn-line" href="preise.html">Preise ansehen</a>
       </div>
     </div>

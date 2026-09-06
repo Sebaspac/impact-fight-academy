@@ -83,8 +83,9 @@
         '\nE-Mail: ' + g('email') + '\nTelefon: ' + g('telefon') +
         '\n\n' + g('nachricht');
       var mail = form.getAttribute('data-mailform');
+      var betreff = form.getAttribute('data-subject') || 'Anfrage über die Website';
       location.href = 'mailto:' + mail +
-        '?subject=' + encodeURIComponent('Anfrage über die Website') +
+        '?subject=' + encodeURIComponent(betreff) +
         '&body=' + encodeURIComponent(body);
     });
   }
