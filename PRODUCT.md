@@ -35,10 +35,13 @@ Originaltexte inkl. Eigenheiten („bedeuet", „Ergeiz", „Zirkelraining") wor
 
 ## Technische Constraints
 - Statisches HTML/CSS/JS, keine Build-Pipeline, kein Backend, kein CMS.
-- **Keine externen Anfragen zur Laufzeit** (keine CDNs, keine Karten-Tiles, keine
-  Webfont-Server). Schriften werden lokal aus assets/fonts/ geladen.
-  Einzige Ausnahmen: Social-Profile (Facebook/Instagram, werden später getauscht)
-  und das YouTube-Video **erst nach Klick** (youtube-nocookie, DSGVO-Einwilligung).
+- **Keine externen Anfragen zur Laufzeit** (keine CDNs, keine Webfont-Server).
+  Schriften werden lokal aus assets/fonts/ geladen.
+  Ausnahmen: Social-Profile (Facebook/Instagram, werden später getauscht),
+  das YouTube-Video **erst nach Klick** (youtube-nocookie, DSGVO-Einwilligung),
+  und die eingebettete Google-Maps-Karte in .map-cta (kontakt.html,
+  probetraining.html) — auf ausdrücklichen Wunsch des Inhabers direkt
+  eingebettet, ohne Klick-Einwilligung.
 - Bilder liegen als austauschbare Dateien unter assets/img/ (FORM-System, BILDER.md).
   `?form` an einer URL blendet die Kennzeichnung ein — muss erhalten bleiben.
 - Kontaktformular: statisch; Absenden erzeugt eine vorbefüllte E-Mail (mailto).
