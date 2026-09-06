@@ -924,12 +924,14 @@ table.plan tbody tr:hover td { background: rgba(221,51,51,.06); }
   width: 16px;
   height: 2px;
   background: var(--red);
-  transform: translateY(-.35em);
-  transition: width .3s var(--ease);
+  /* scaleX statt width: kein Layout beim Hover, der Wert bleibt stehen */
+  transform-origin: left center;
+  transform: translateY(-.35em) scaleX(1);
+  transition: transform .3s var(--ease);
 }
 .value-list li:nth-child(3n)::before { background: var(--blue); }
 .value-list li:hover { border-bottom-color: var(--line); }
-.value-list li:hover::before { width: 28px; }
+.value-list li:hover::before { transform: translateY(-.35em) scaleX(1.75); }
 /* Unter 780px reicht die halbe Spalte nicht mehr fuer die langen Werte
    ("geistige Stärke / körperliche Stärke" braucht rund 300px) — dann
    einspaltig, zusammen mit dem .split-Umbruch derselben Sektion. */
@@ -937,18 +939,24 @@ table.plan tbody tr:hover td { background: rgba(221,51,51,.06); }
   .value-list { grid-template-columns: 1fr; }
 }
 
-/* Mission als ruhiger Schlusssatz: Label klein, Aussage gross */
-.mission {
-  border-left: 3px solid var(--red);
-  padding-left: clamp(18px, 2.5vw, 28px);
-  margin-top: clamp(24px, 3vw, 34px);
-}
+/* Mission als ruhiger Schlusssatz: Label klein, Aussage gross.
+   Als Marke der rote Balken der Seite (wie .page-hero h1::after) statt
+   einer seitlichen Akzentkante. */
+.mission { margin-top: clamp(28px, 3.5vw, 40px); }
 .mission h3 {
+  position: relative;
+  padding-top: 20px;
   font-size: .82rem;
   font-weight: 600;
   letter-spacing: .16em;
   color: var(--red-hot);
   margin-bottom: .9em;
+}
+.mission h3::before {
+  content: '';
+  position: absolute; left: 0; top: 0;
+  width: 64px; height: 4px;
+  background: var(--red);
 }
 .mission p {
   font-family: var(--font-disp);
