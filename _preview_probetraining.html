@@ -7,6 +7,17 @@
   <meta name="description" content="Die erste Probestunde in der Impact Fight Academy München ist kostenlos. Such dir eine Trainingseinheit aus – Ausrüstung stellen wir. Telefon, E-Mail und Adresse findest du hier.">
   <link rel="icon" type="image/png" href="assets/img/brand/logo-impact-header.png">
   <link rel="stylesheet" href="assets/css/site.css">
+  <style>
+  /* ---------- Anfahrtskasten mit Postanschrift ----------
+     Der Anfahrtskasten traegt die Adresse als <address> statt als Fliesstext:
+     gleiche Setzung wie in .contact-list, gleicher Abstand zum Button wie beim <p>. */
+  .map-cta address {
+    font-style: normal;
+    line-height: 1.55;
+    color: var(--text-2);
+    margin-bottom: 18px;
+  }
+  </style>
 </head>
 <body>
 
@@ -45,9 +56,7 @@
 
   <section class="page-hero wall reveal">
     <div class="hero-media px" data-px="0.10">
-      <img src="assets/img/gym/gym04.jpeg"
-           alt="Trainer hält im Ring die Pratzen für eine Trainierende der Impact Fight Academy"
-           width="1280" height="641" loading="eager">
+      <img src="assets/img/galerie/galerie13.webp" alt="" loading="eager" width="3738" height="2268">
     </div>
     <span class="bg-word fill px" data-px="0.08" aria-hidden="true" style="top:-0.05em;left:-0.03em;">PROBE</span>
     <div class="wrap">
@@ -55,7 +64,7 @@
       <p class="lead">Die erste Probestunde ist kostenlos – lern uns einfach kennen.</p>
       <div class="actions">
         <a class="btn btn-red" href="kontakt.html">Zum Kontaktformular</a>
-        <a class="btn btn-line" href="tel:+498960062138">+49 89 600 621 38</a>
+        <a class="btn btn-line" href="training.html">Trainingsplan ansehen</a>
       </div>
     </div>
   </section>
@@ -64,30 +73,40 @@
     <span class="bg-word red px" data-px="-0.06" aria-hidden="true" style="--tilt:-4deg;top:-0.06em;right:-0.04em;">GRATIS</span>
     <div class="wrap">
       <div class="section-head">
-        <h2>So läuft dein Probetraining</h2>
+        <h2>So läuft es ab</h2>
       </div>
-      <ol class="grid grid-3 steps" role="list">
-        <li class="card num-card">
-          <span class="n" aria-hidden="true">01</span>
+
+      <div class="age-row">
+        <div class="age-head">
+          <span class="age-badge" aria-hidden="true">01</span>
+        </div>
+        <div class="age-body">
           <p>Sucht euch einfach eine <a href="training.html">Trainingseinheit</a> aus die zeitlich
             für euch passt und teilt uns noch mit, welche Erfahrung ihr bereits mit Kampfsport habt.</p>
-        </li>
-        <li class="card num-card">
-          <span class="n" aria-hidden="true">02</span>
+        </div>
+      </div>
+
+      <div class="age-row">
+        <div class="age-head">
+          <span class="age-badge" aria-hidden="true">02</span>
+        </div>
+        <div class="age-body">
           <p>In diesen Trainingseinheiten ist ein Trainer für euch da der für euch und euren
             Einstieg Zeit hat.</p>
-        </li>
-        <li class="card num-card">
-          <span class="n" aria-hidden="true">03</span>
+        </div>
+      </div>
+
+      <div class="age-row">
+        <div class="age-head">
+          <span class="age-badge" aria-hidden="true">03</span>
+        </div>
+        <div class="age-body">
           <p>Die erste Probestunde ist kostenlos. Falls ihr keine Ausrüstung habt, stellen wir sie
             euch zur Verfügung. Die Boxhandschuhe und Schoner werden nach jeder Benutzung von uns
             desinfiziert. Und dann kann es auch schon losgehen!</p>
-        </li>
-      </ol>
-      <div class="hint">
-        <p>Solltet ihr noch Fragen haben könnt ihr uns gerne
-          <a href="kontakt.html">kontaktieren</a>. Wir freuen uns auf euch!</p>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -95,39 +114,58 @@
     <div class="wrap">
       <div class="section-head">
         <h2>So erreichst du uns</h2>
+        <p>Solltet ihr noch Fragen haben könnt ihr uns gerne
+          <a href="kontakt.html">kontaktieren</a>. Wir freuen uns auf euch!</p>
       </div>
+
       <div class="grid grid-2">
-        <div class="stack contact-list">
-          <div class="text-block">
-            <h4>Telefon</h4>
-            <p><a href="tel:+498960062138">+49 89 600 621 38</a></p>
+
+        <div class="contact-list">
+          <div class="item">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7.4 3.5H4.8A1.8 1.8 0 0 0 3 5.4c0 8.9 6.7 15.6 15.6 15.6a1.8 1.8 0 0 0 1.9-1.8v-2.6a1 1 0 0 0-.8-1l-3.4-.7a1 1 0 0 0-1 .4l-.9 1.2a12.6 12.6 0 0 1-5.2-5.2l1.2-.9a1 1 0 0 0 .4-1l-.7-3.4a1 1 0 0 0-1-.8Z"/>
+            </svg>
+            <div>
+              <div class="label">Telefon</div>
+              <a href="tel:+498960062138">+49 89 600 621 38</a>
+            </div>
           </div>
-          <div class="text-block">
-            <h4>Mobil</h4>
-            <p><a href="tel:+491788513156">+49 178 851 315 6</a></p>
+
+          <div class="item">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="6.5" y="2.5" width="11" height="19" rx="2.4"/>
+              <path d="M10.8 18.4h2.4"/>
+            </svg>
+            <div>
+              <div class="label">Mobil</div>
+              <a href="tel:+491788513156">+49 178 851 315 6</a>
+            </div>
           </div>
-          <div class="text-block">
-            <h4>E-Mail</h4>
-            <button class="btn btn-line" type="button"
-                    data-email-user="info" data-email-domain="impact-fightacademy.de">
-              E-Mail-Adresse anzeigen
-            </button>
+
+          <div class="item">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2.5" y="4.8" width="19" height="14.4" rx="2.2"/>
+              <path d="m3.6 6.6 8.4 6 8.4-6"/>
+            </svg>
+            <div>
+              <div class="label">E-Mail</div>
+              <button class="btn btn-line" type="button"
+                      data-email-user="info" data-email-domain="impact-fightacademy.de">
+                E-Mail-Adresse anzeigen
+              </button>
+            </div>
           </div>
         </div>
-        <div class="stack contact-list">
-          <div class="text-block">
-            <h4>Adresse</h4>
-            <address>
-              Pfälzer-Wald-Str. 65 / Rückgebäude<br>
-              81539 München
-            </address>
-          </div>
-          <div class="map-cta">
-            <h4>So findest du uns</h4>
-            <p>Pfälzer-Wald-Str. 65 / Rückgebäude, 81539 München-Giesing.</p>
-            <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Pf%C3%A4lzer-Wald-Str.+65%2C+81539+M%C3%BCnchen" target="_blank" rel="noopener">Route in Google Maps öffnen</a>
-          </div>
+
+        <div class="map-cta">
+          <h3>So findest du uns</h3>
+          <address>
+            Pfälzer-Wald-Str. 65 / Rückgebäude<br>
+            81539 München
+          </address>
+          <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Pf%C3%A4lzer-Wald-Str.+65%2C+81539+M%C3%BCnchen" target="_blank" rel="noopener">Route in Google Maps öffnen</a>
         </div>
+
       </div>
     </div>
   </section>

@@ -6,7 +6,7 @@ Jedes Bild der Website liegt als **eigene Datei** unter `assets/img/`.
 
 **Im Browser anzeigen:** `?form` an die URL hängen, z. B. `http://localhost:8080/index.html?form` — dann wird jeder Platz rot umrandet und mit seinem Namen beschriftet.
 
-## Home — `index.html`  (12 Bilder)
+## Home — `index.html`  (13 Bilder)
 Austauschbare Motive insgesamt (mit Mehrfachnutzung): **45**
 
 
@@ -24,6 +24,7 @@ Austauschbare Motive insgesamt (mit Mehrfachnutzung): **45**
 | `Bobby.webp` | 512×512 | 13 | `assets/img/trainer/Bobby.webp` |
 | `Marko_Kraljevic.webp` | 3150×3306 | 133 | `assets/img/kaempfer/Marko_Kraljevic.webp` |
 | `David_Ayiti.jpg` | 1200×1600 | 112 | `assets/img/kaempfer/David_Ayiti.jpg` |
+| `galerie15.webp` | 3960×2640 | 1329 | `assets/img/galerie/galerie15.webp` |
 
 ## Training — `training.html`  (8 Bilder)
 
@@ -89,7 +90,7 @@ Austauschbare Motive insgesamt (mit Mehrfachnutzung): **45**
 | Datei | Größe | KB | Pfad |
 |---|---|---|---|
 | `logo-impact-header.png` | 161×120 | 39 | `assets/img/brand/logo-impact-header.png` |
-| `galerie15.webp` | 3960×2640 | 1329 | `assets/img/galerie/galerie15.webp` |
+| `gym04.jpeg` | 1280×641 | 97 | `assets/img/gym/gym04.jpeg` |
 
 ## Impressum — `impressum.html`  (1 Bilder)
 
