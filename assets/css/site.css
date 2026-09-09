@@ -709,28 +709,54 @@ table.plan tbody tr:hover td { background: rgba(221,51,51,.06); }
 .page-hero .hero-media, .hero .hero-media { z-index: -2; }
 .page-hero.wall, .hero.wall { isolation: isolate; }
 
-/* Video im Home-Hero: gleiche Mechanik wie .video-consent, aber vollflaechig
-   als Hero-Hintergrund statt als 16:9-Kachel im Textfluss. */
-.hero .video-consent {
-  position: absolute; inset: -6% 0 0;
+/* ---------- Hero-Video (Startseite) ----------
+   Vollflaechig hinter der Schrift. Zwei Ebenen: das Bild traegt den Hero immer,
+   das Video legt sich darueber, sobald es abspielt. Faellt das Video aus (Datei
+   fehlt, Format nicht unterstuetzt, reduzierte Bewegung gewuenscht), bleibt das
+   Bild stehen — der Hero sieht nie kaputt aus. Umschalten macht site.js ueber
+   die Klasse .is-playing. */
+.hero-video {
+  position: absolute;
+  inset: -6% 0 0;
   z-index: -2;
-  aspect-ratio: auto;
-  border-radius: 0;
+  overflow: clip;
+  pointer-events: none;
+  background: var(--bg);
 }
-.hero .video-consent::after {
+.hero-video > img,
+.hero-video > video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* Video erst zeigen, wenn es wirklich laeuft — sonst blitzt eine schwarze
+   Flaeche auf, bevor das erste Bild da ist. */
+.hero-video > video {
+  opacity: 0;
+  transition: opacity .8s var(--ease);
+}
+.hero-video.is-playing > video { opacity: 1; }
+
+/* Verlauf nach unten in die Seitenfarbe, damit die Schrift lesbar bleibt und
+   der Hero nahtlos in die Laufschrift darunter uebergeht. */
+.hero-video::after {
   content: '';
-  position: absolute; inset: 0;
-  background: linear-gradient(to top, var(--bg) 0%, rgba(19,19,21,.55) 45%, rgba(19,19,21,.35) 100%);
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    var(--bg) 0%,
+    color-mix(in srgb, var(--bg) 78%, transparent) 42%,
+    color-mix(in srgb, var(--bg) 52%, transparent) 100%
+  );
 }
-.hero .video-consent > img { opacity: .3; }
-.hero .video-consent .veil {
-  justify-content: flex-start;
-  padding-top: clamp(70px, 12vh, 130px);
-  padding-bottom: 0;
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video > video { display: none; }
 }
-.hero .video-consent .veil p { max-width: 46ch; font-size: .85rem; }
-.hero:has(.video-consent) { min-height: clamp(640px, 88vh, 900px); }
-.hero .video-consent .veil .btn { font-size: .95rem; padding: 12px 20px 11px; }
 
 /* Zickzack-Module: Bild links/Text rechts, naechstes umgekehrt */
 .split {

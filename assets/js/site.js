@@ -32,15 +32,41 @@
     document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
   }
 
-  /* YouTube erst nach Einwilligung laden (DSGVO) */
-  document.addEventListener('click', function (e) {
-    var btn = e.target.closest('[data-yt]');
-    if (!btn) return;
-    var wrap = btn.closest('.video-consent');
-    if (!wrap) return;
-    var id = btn.getAttribute('data-yt');
-    wrap.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id +
-      '?autoplay=1" title="IMPACT FIGHT ACADEMY" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+  /* Hero-Video: selbst gehostet, kein Dritter, keine Einwilligung noetig.
+     Das Video wird erst eingeblendet, wenn es tatsaechlich laeuft — und gar
+     nicht erst gestartet, wenn der Besucher reduzierte Bewegung eingestellt
+     hat oder die Datei fehlt. Das Bild darunter traegt den Hero in dem Fall. */
+  document.querySelectorAll('.hero-video').forEach(function (wrap) {
+    var video = wrap.querySelector('video');
+    if (!video) return;
+
+    var ruhig = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (ruhig && ruhig.matches) return;
+
+    var quelle = video.querySelector('source');
+    if (!quelle || !quelle.getAttribute('src')) return;
+
+    video.addEventListener('playing', function () { wrap.classList.add('is-playing'); });
+    video.addEventListener('error', function () { wrap.classList.remove('is-playing'); }, true);
+
+    // Autoplay nur mit muted — sonst blockt jeder Browser. Schlaegt es trotzdem
+    // fehl (Energiesparmodus, Datensparmodus), bleibt einfach das Bild stehen.
+    video.muted = true;
+    var versuch = video.play();
+    if (versuch && typeof versuch.catch === 'function') {
+      versuch.catch(function () { wrap.classList.remove('is-playing'); });
+    }
+
+    // Ausserhalb des Sichtfelds pausieren — spart Akku und Bandbreite auf
+    // langen Seiten, das Video sitzt ja ganz oben.
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { var p = video.play(); if (p && p.catch) p.catch(function () {}); }
+          else video.pause();
+        });
+      }, { threshold: 0.05 }).observe(wrap);
+    }
   });
 
   /* Galerie-Lightbox */

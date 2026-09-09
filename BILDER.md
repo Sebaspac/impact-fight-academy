@@ -13,7 +13,7 @@ Austauschbare Motive insgesamt (mit Mehrfachnutzung): **45**
 | Datei | Größe | KB | Pfad |
 |---|---|---|---|
 | `logo-impact-header.png` | 161×120 | 39 | `assets/img/brand/logo-impact-header.png` |
-| `video-thumb.jpg` | 480×360 | 29 | `assets/img/video/video-thumb.jpg` |
+| `hero.jpg` | 1920×1232 | 365 | `assets/img/hero/hero.jpg` |
 | `Slave.webp` | 512×512 | 10 | `assets/img/trainer/Slave.webp` |
 | `Tuncay.webp` | 512×512 | 9 | `assets/img/trainer/Tuncay.webp` |
 | `Felix.webp` | 512×512 | 13 | `assets/img/trainer/Felix.webp` |

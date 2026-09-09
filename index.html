@@ -44,14 +44,17 @@
 <main>
 
   <section class="hero wall">
-    <div class="video-consent px" data-px="0.06">
-      <img src="assets/img/video/video-thumb.jpg"
-           alt="Platzhalter-Vorschaubild für YouTube-Video"
-           width="480" height="360" loading="eager">
-      <div class="veil">
-        <p>Um dieses Video anzusehen, klicken Sie bitte unten. Dadurch stimmen Sie der Datenverarbeitung durch YouTube/Google gemäß deren Datenschutzrichtlinien zu. Weitere Informationen finden Sie in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
-        <button class="btn btn-red" type="button" data-yt="ECVYKffh_qA">Video laden &amp; Datenschutzhinweis akzeptieren</button>
-      </div>
+    <!-- Selbst gehostetes Hero-Video. Bewusst kein YouTube: das duerfte erst nach
+         Klick laden (DSGVO) und koennte deshalb nie automatisch abspielen. Eine
+         eigene Datei bindet keinen Dritten ein, laeuft sofort und braucht keine
+         Einwilligung. Das Bild darunter traegt den Hero, solange die Videodatei
+         fehlt oder der Besucher reduzierte Bewegung eingestellt hat. -->
+    <div class="hero-video px" data-px="0.06" aria-hidden="true">
+      <img src="assets/img/hero/hero.jpg" alt=""
+           width="1920" height="1232" loading="eager" fetchpriority="high">
+      <video muted loop playsinline preload="metadata" tabindex="-1">
+        <source src="assets/video/hero.mp4" type="video/mp4">
+      </video>
     </div>
     <span class="bg-word fill px" data-px="0.10" aria-hidden="true" style="bottom:.85em;left:-.04em;">IMPACT</span>
     <span class="bg-word red px" data-px="-0.06" aria-hidden="true" style="--tilt:-4deg;bottom:-.12em;right:-.06em;">BOXEN</span>
