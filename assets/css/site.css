@@ -874,6 +874,51 @@ table.plan tbody tr:hover td { background: rgba(221,51,51,.06); }
 }
 .num-card h4 { margin: 0; }
 
+/* ---------- Kennenlernen: Beitrag und Anfahrt nebeneinander ----------
+   Zwei gleich hohe Tafeln. Links der Fernsehbeitrag (breiter, weil 16:9 Breite
+   braucht), rechts die Karte, deren Kartenflaeche mitwaechst, damit beide
+   Tafeln unten auf einer Linie enden. */
+.meet {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: clamp(18px, 2.5vw, 28px);
+  align-items: stretch;
+}
+.meet-panel {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r);
+  overflow: clip;
+}
+.meet-media { position: relative; background: #000; }
+.meet-media > video,
+.meet-media > iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  object-fit: cover;
+}
+.meet-media-video { aspect-ratio: 16 / 9; }
+/* Die Karte hat kein eigenes Seitenverhaeltnis, sie fuellt den Rest der Hoehe,
+   die das Video-Panel vorgibt. */
+.meet-media-map { flex: 1; min-height: 240px; }
+
+.meet-body { padding: clamp(20px, 2.6vw, 28px); }
+.meet-body h3 { margin-bottom: .4em; }
+.meet-body p { color: var(--text-2); margin-bottom: 0; max-width: 58ch; }
+.meet-body strong { color: var(--text); font-weight: 600; }
+.meet-body .btn { margin-top: 20px; }
+
+@media (max-width: 900px) {
+  .meet { grid-template-columns: 1fr; }
+  .meet-media-map { flex: none; aspect-ratio: 16 / 10; min-height: 0; }
+}
+
 /* ---------- Einstieg in die Online-Mitgliedschaft ----------
    Führt auf /anmeldung (eigene Anwendung, siehe _redirects). Bewusst vom
    kostenlosen Probetraining getrennt: das bleibt der Weg zum Reinschnuppern,

@@ -37,11 +37,15 @@ Originaltexte inkl. Eigenheiten („bedeuet", „Ergeiz", „Zirkelraining") wor
 - Statisches HTML/CSS/JS, keine Build-Pipeline, kein Backend, kein CMS.
 - **Keine externen Anfragen zur Laufzeit** (keine CDNs, keine Webfont-Server).
   Schriften werden lokal aus assets/fonts/ geladen.
-  Ausnahmen: Social-Profile (Facebook/Instagram, werden später getauscht),
-  das YouTube-Video **erst nach Klick** (youtube-nocookie, DSGVO-Einwilligung),
-  und die eingebettete Google-Maps-Karte in .map-cta (kontakt.html,
-  probetraining.html) — auf ausdrücklichen Wunsch des Inhabers direkt
-  eingebettet, ohne Klick-Einwilligung.
+  Ausnahmen: Social-Profile (Facebook/Instagram, werden später getauscht)
+  und die eingebettete Google-Maps-Karte (kontakt.html, probetraining.html,
+  index.html) — auf ausdrücklichen Wunsch des Inhabers direkt eingebettet,
+  ohne Klick-Einwilligung.
+- Videos liegen selbst gehostet unter assets/video/ (kein YouTube mehr, damit
+  sie ohne Einwilligung sofort abspielen können):
+  hero.mp4 (Startseite, stumme Schleife im Kopfbereich) und
+  sat1-bayernsport.mp4 (Fernsehbeitrag, anklickbar im Abschnitt „Kennenlernen").
+  **Offen: Nutzungsrechte am SAT.1-Bayern-Beitrag sind mit dem Sender zu klären.**
 - Bilder liegen als austauschbare Dateien unter assets/img/ (FORM-System, BILDER.md).
   `?form` an einer URL blendet die Kennzeichnung ein — muss erhalten bleiben.
 - Kontaktformular: statisch; Absenden erzeugt eine vorbefüllte E-Mail (mailto).

@@ -6,7 +6,7 @@ Jedes Bild der Website liegt als **eigene Datei** unter `assets/img/`.
 
 **Im Browser anzeigen:** `?form` an die URL hängen, z. B. `http://localhost:8080/index.html?form` — dann wird jeder Platz rot umrandet und mit seinem Namen beschriftet.
 
-## Home — `index.html`  (13 Bilder)
+## Home — `index.html`  (14 Bilder)
 Austauschbare Motive insgesamt (mit Mehrfachnutzung): **45**
 
 
@@ -14,6 +14,7 @@ Austauschbare Motive insgesamt (mit Mehrfachnutzung): **45**
 |---|---|---|---|
 | `logo-impact-header.png` | 161×120 | 39 | `assets/img/brand/logo-impact-header.png` |
 | `hero.jpg` | 1920×1232 | 365 | `assets/img/hero/hero.jpg` |
+| `bericht-poster.jpg` | 640×360 | 68 | `assets/img/video/bericht-poster.jpg` |
 | `Slave.webp` | 512×512 | 10 | `assets/img/trainer/Slave.webp` |
 | `Tuncay.webp` | 512×512 | 9 | `assets/img/trainer/Tuncay.webp` |
 | `Felix.webp` | 512×512 | 13 | `assets/img/trainer/Felix.webp` |

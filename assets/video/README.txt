@@ -37,3 +37,20 @@ Hero von index.html anpassen.
 
 Kein Ton, keine Untertitel nötig: das Video transportiert keine Information,
 die sonst verloren ginge (deshalb steht der ganze Block auf aria-hidden).
+
+
+FERNSEHBEITRAG (sat1-bayernsport.mp4)
+
+Anklickbares Video im Abschnitt "Möchtest du uns kennenlernen?" auf der
+Startseite. Anders als hero.mp4 läuft es NICHT automatisch, hat Ton und
+wird in einem eigenen Player gezeigt — dort ist die 640x360-Auflösung
+der Quelle nahezu 1:1 und damit scharf.
+
+Geschnitten aus dem gelieferten SAT.1-Bayern-Beitrag: Sekunde 10,5 bis 158.
+Weggeschnitten sind der GlücksSpirale-Sponsorenspot am Anfang (0-10 s) und
+Werbung plus "BAYERNSPORT"-Abspann am Ende (ab 158 s).
+
+Posterbild: assets/img/video/bericht-poster.jpg (Gruppenaufnahme, Sek. 160).
+
+WICHTIG: Die Nutzungsrechte an diesem Beitrag liegen beim Sender. Vor dem
+Livegang eine schriftliche Freigabe von SAT.1 Bayern einholen.
